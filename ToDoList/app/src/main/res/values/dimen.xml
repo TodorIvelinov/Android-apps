@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="todo_item_text_size">18sp</dimen>
+    <dimen name="start_margin">10dp</dimen>
+    <dimen name="end_margin">8dp</dimen>
+    <dimen name="bottom_margin">16dp</dimen>
+    <dimen name="padding_6dp">6dp</dimen>
+    <dimen name="padding_start">12dp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
+    <dimen name="card_corner_radius">10dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="details_screen_task_et_min_height">60dp</dimen>
+    <dimen name="fragment_todo_toolbar_button_with_height">40dp</dimen>
+    <dimen name="fragment_todo_toolbar_button_end_margin">20dp</dimen>
+</resources>
