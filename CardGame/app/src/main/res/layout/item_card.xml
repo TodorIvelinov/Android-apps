@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="memoryCard"
+            type="com.example.cardgame.MemoryCard" />
+    </data>
+
+    <FrameLayout
+		android:id="@+id/card_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/card_item_ib"
+            android:layout_width="@dimen/card_item_ib_width_height"
+            android:layout_height="@dimen/card_item_ib_width_height"
+			android:layout_gravity="center"
+            android:background="@drawable/card_back_img"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:memoryCard="@{memoryCard}" />
+
+    </FrameLayout>
+</layout>

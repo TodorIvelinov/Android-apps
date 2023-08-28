@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Card Game</string>
+    <string name="play_again_if_you_want">You won the game!</string>
+    <string name="welcome_fragment_text">Play Card Game!</string>
+    <string name="play_again_button">PLAY AGAIN</string>
+    <string-array name="card_numbers">
+        <item>Choose number of cards to play whit</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20</item>
+    </string-array>
+
+</resources>
