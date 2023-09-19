@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">weatherApp</string>
+    <string name="city_prompt">Select a city</string>
+    <string name="fetch_button_label">Show Weather</string>
+    <string name="temperature_title">Temperature</string>
+    <string name="time_title">Time</string>
+
+    <string-array name="city_array">
+        <item>Burgas</item>
+        <item>Sofia</item>
+        <item>Varna</item>
+        <item>Plovdiv</item>
+    </string-array>
+</resources>

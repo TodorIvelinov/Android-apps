@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_hourly_temp_item">16sp</dimen>
+    <dimen name="layout_marginTop_hourly_temp_item">8sp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="button_margin_top">16dp</dimen>
+    <dimen name="button_margin_bottom">16dp</dimen>
+    <dimen name="image_view_size">48dp</dimen>
+    <dimen name="rv_margin_top">16dp</dimen>
+    <dimen name="chosen_city_margin_top">16dp</dimen>
+    <dimen name="chosen_city_text_size">24sp</dimen>
+    <dimen name="spinner_margin_top">16dp</dimen>
+    <dimen name="spinner_margin_bottom">16dp</dimen>
+    <dimen name="layout_marginStart_hourly_temp_item">8sp</dimen>
+    <dimen name="spinner_margin_bot">16dp</dimen>
+    <dimen name="weather_info_text_margin_top">8dp</dimen>
+    <dimen name="weather_info_text_text_size">16sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="weather_icon_height">64dp</dimen>
+    <dimen name="weather_icon_width">64dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="padding_4dp">4dp</dimen>
+    <dimen name="card_view_margin_top">16dp</dimen>
+    <dimen name="card_view_elevation">4dp</dimen>
+    <dimen name="card_view_radius">8dp</dimen>
+    <dimen name="spinner_item_height">36dp</dimen>
+</resources>

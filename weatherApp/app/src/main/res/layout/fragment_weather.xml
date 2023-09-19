@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.weatherapp.weather.WeatherViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/padding_16dp">
+
+        <Spinner
+            android:id="@+id/citySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spinner_margin_top"
+            android:layout_marginBottom="@dimen/spinner_margin_bottom"
+            android:background="@color/soft_pink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/fetchButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:layout_marginBottom="@dimen/button_margin_bottom"
+            android:text="@string/fetch_button_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/citySpinner" />
+
+        <TextView
+            android:id="@+id/chosenCityTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/chosen_city_margin_top"
+            android:gravity="center"
+            android:text="@{viewModel.chosenCity}"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/chosen_city_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/weatherCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fetchButton"
+            tools:text="SOFIA" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weatherCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_view_margin_top"
+            app:cardCornerRadius="@dimen/card_view_radius"
+            app:cardElevation="@dimen/card_view_elevation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chosenCityTextView"
+            app:visibleGone="@{viewModel.chosenCity != null}">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/soft_purple"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_16dp">
+
+                <ImageView
+                    android:id="@+id/weatherIconImageView"
+                    android:layout_width="@dimen/weather_icon_width"
+                    android:layout_height="@dimen/weather_icon_height"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/weatherInfoTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/weather_info_text_margin_top"
+                    android:text="@{viewModel.weatherInfo}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/weather_info_text_text_size"
+                    tools:text="Current temperature 16.7°C" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/rv_margin_top"
+            android:text="@string/time_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherCardView"
+            app:visibleGone="@{viewModel.chosenCity != null}" />
+
+        <TextView
+            android:id="@+id/temperature_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/rv_margin_top"
+            android:text="@string/temperature_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherCardView"
+            app:visibleGone="@{viewModel.chosenCity != null}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hourlyTemperatureRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time_title"
+            tools:itemCount="4"
+            tools:listitem="@layout/hourly_temperature_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
