@@ -1,4 +1,5 @@
 # Android-apps
+
 # Matching Cards Game
 
 A fun and interactive matching cards game implemented using LiveData, RecyclerView, Spinner, and Data Binding Adapter.
@@ -143,3 +144,84 @@ This app is licensed under the [MIT License](LICENSE).
 ---
 
 Feel free to customize the sections, content, and formatting to match your app's specifics. Providing a clear and informative README will help users understand how to use your app and encourage collaboration and contributions.
+
+---
+
+# Weather App
+
+This is a simple Android application that provides weather information based on location coordinates. It uses Open-Meteo API to fetch weather data.
+
+## Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- Display current weather information for selected cities (Sofia, Burgas, Varna, Plovdiv).
+- Show hourly temperature forecast.
+- Cache weather data using Room database for offline access.
+
+## Screenshots
+
+Include some screenshots here if possible.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+What things you need to install the software and how to install them.
+
+- Android Studio
+- Internet Connection
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/weather-app.git
+```
+
+2. Open the project in Android Studio.
+
+3. Run the app on an emulator or physical device.
+
+## Usage
+
+1. Open the app.
+2. Select a city from the dropdown menu.
+3. Click on the "Fetch Weather" button to get the current weather information.
+4. The app will display the current temperature and hourly temperature forecast.
+
+## Technologies Used
+
+- Android SDK
+- Kotlin
+- Room Database
+- Retrofit
+- Moshi
+- Glide
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+- Thanks to [Open-Meteo](https://open-meteo.com/) for providing the weather API.
+
+Feel free to customize the README further based on your specific project details and requirements. If you have any specific questions or need further assistance, please let me know!
